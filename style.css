@@ -88,9 +88,25 @@ main {
   transform: translateY(0);
 }
 
-.category-icon {
-  font-size: 2rem;
-  line-height: 1;
+.category-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-icon-wrap svg {
+  width: 30px;
+  height: 30px;
+}
+
+.recipe-item-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 .category-name {
@@ -149,6 +165,15 @@ main {
   font-size: 1.2rem;
   font-weight: 700;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recipe-title svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
 
 /* ========== Add Form ========== */

@@ -1,31 +1,92 @@
 const CATEGORIES = [
-  { id: 'vegetable', name: '野菜',   icon: '🥕' },
-  { id: 'meat',      name: '肉',     icon: '🥩' },
-  { id: 'seafood',   name: '魚介',   icon: '🦐' },
-  { id: 'egg',       name: '卵',     icon: '🥚' },
-  { id: 'soup',      name: 'スープ', icon: '🍲' },
-  { id: 'rice',      name: 'ごはん', icon: '🍚' },
-  { id: 'noodle',    name: '麺',     icon: '🍜' },
-  { id: 'sweets',    name: 'スイーツ', icon: '🍰' },
+  {
+    id: 'vegetable', name: '野菜', color: '#7ab648', bg: '#f0f7e8',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 17C22 11 15 10 13 14"/>
+      <path d="M24 17C24 9 24 6 24 6"/>
+      <path d="M24 17C26 11 33 10 35 14"/>
+      <path d="M18 22Q15 32 24 43Q33 32 30 22Q27 17 24 17Q21 17 18 22Z"/>
+      <path d="M20 28Q24 26 28 28"/>
+      <path d="M21 34Q24 32 27 34"/>
+    </svg>`
+  },
+  {
+    id: 'meat', name: '肉', color: '#e87a5a', bg: '#fdf0ec',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 29C9 21 14 12 23 12C27 12 30 10 33 12C40 15 41 23 39 31C37 37 30 41 22 39C15 37 12 34 11 29Z"/>
+      <line x1="31" y1="11" x2="38" y2="5"/>
+      <circle cx="39.5" cy="4" r="3.5"/>
+    </svg>`
+  },
+  {
+    id: 'seafood', name: '魚介', color: '#5aaec8', bg: '#e8f5fb',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 24C12 24 20 14 30 18C38 21 40 24 40 24C40 24 38 28 30 30C20 34 12 24 12 24Z"/>
+      <path d="M12 24L5 17"/>
+      <path d="M12 24L5 31"/>
+      <circle cx="33" cy="21" r="2" fill="currentColor"/>
+      <path d="M24 19C27 17 30 18 30 18"/>
+    </svg>`
+  },
+  {
+    id: 'egg', name: '卵', color: '#f0b830', bg: '#fdf7e4',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 7C18 7 12 16 12 27C12 37 17 43 24 43C31 43 36 37 36 27C36 16 30 7 24 7Z"/>
+    </svg>`
+  },
+  {
+    id: 'soup', name: 'スープ', color: '#e07040', bg: '#fdf1ea',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 15C19 12 21 10 21 10C21 10 23 12 23 15"/>
+      <path d="M27 15C27 12 29 10 29 10C29 10 31 12 31 15"/>
+      <line x1="5" y1="25" x2="43" y2="25"/>
+      <path d="M8 25L11 41H37L40 25"/>
+      <path d="M5 25C5 25 7 21 8 25"/>
+      <path d="M43 25C43 25 41 21 40 25"/>
+    </svg>`
+  },
+  {
+    id: 'rice', name: 'ごはん', color: '#5fbfb0', bg: '#e8f7f5',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13Q24 7 30 13"/>
+      <path d="M14 22Q16 13 24 13Q32 13 34 22"/>
+      <line x1="11" y1="33" x2="37" y2="33"/>
+      <path d="M14 22C14 22 12 27 12 33"/>
+      <path d="M34 22C34 22 36 27 36 33"/>
+      <path d="M12 33Q12 43 24 43Q36 43 36 33"/>
+    </svg>`
+  },
+  {
+    id: 'noodle', name: '麺', color: '#d4943a', bg: '#fdf4e4',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 31Q11 23 24 23Q37 23 39 31"/>
+      <path d="M9 31H39L36 43H12L9 31Z"/>
+      <path d="M15 27Q18 25 21 27Q24 29 27 27Q30 25 33 27"/>
+      <line x1="21" y1="13" x2="19" y2="27"/>
+      <line x1="27" y1="13" x2="29" y2="27"/>
+    </svg>`
+  },
+  {
+    id: 'sweets', name: 'スイーツ', color: '#e078a8', bg: '#fdeef5',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 20C14 20 15 13 24 13C33 13 34 20 34 20"/>
+      <path d="M10 40L14 20H34L38 40H10Z"/>
+      <line x1="10" y1="30" x2="38" y2="30"/>
+      <path d="M19 13C21 9 27 9 29 13"/>
+      <path d="M22 9C22 7 26 7 26 9"/>
+    </svg>`
+  },
 ];
 
 const STORAGE_KEY = 'fav_recipes';
 
 function loadData() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-  } catch {
-    return {};
-  }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch { return {}; }
 }
 
 function saveData(data) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-}
-
-function countBadge(count) {
-  const cls = count === 0 ? 'category-count zero' : 'category-count';
-  return `<span class="${cls}">${count}</span>`;
 }
 
 function renderCategories() {
@@ -33,10 +94,13 @@ function renderCategories() {
   const grid = document.getElementById('categoryGrid');
   grid.innerHTML = CATEGORIES.map(cat => {
     const count = (data[cat.id] || []).length;
+    const badgeCls = count === 0 ? 'category-count zero' : 'category-count';
     return `
       <div class="category-card" data-id="${cat.id}" role="button" tabindex="0" aria-label="${cat.name}">
-        ${countBadge(count)}
-        <span class="category-icon">${cat.icon}</span>
+        <span class="${badgeCls}">${count}</span>
+        <span class="category-icon-wrap" style="background:${cat.bg};color:${cat.color}">
+          ${cat.icon}
+        </span>
         <span class="category-name">${cat.name}</span>
       </div>`;
   }).join('');
@@ -54,15 +118,13 @@ let currentCategoryId = null;
 function openCategory(id) {
   const cat = CATEGORIES.find(c => c.id === id);
   currentCategoryId = id;
-
-  document.getElementById('categoriesSection') && (document.querySelector('.categories-section').style.display = 'none');
   document.querySelector('.categories-section').style.display = 'none';
   document.getElementById('recipeSection').style.display = 'block';
-  document.getElementById('recipeTitle').textContent = `${cat.icon} ${cat.name}`;
+  document.getElementById('recipeTitle').innerHTML =
+    `<span style="color:${cat.color}">${cat.icon}</span> ${cat.name}`;
   document.getElementById('recipeNameInput').value = '';
   document.getElementById('recipeLinkInput').value = '';
   document.getElementById('formError').textContent = '';
-
   renderRecipes(id);
 }
 
@@ -70,21 +132,23 @@ function renderRecipes(id) {
   const data = loadData();
   const recipes = data[id] || [];
   const list = document.getElementById('recipeList');
+  const cat = CATEGORIES.find(c => c.id === id);
 
   if (recipes.length === 0) {
     list.innerHTML = '<p class="empty-msg">まだレシピが登録されていません</p>';
     return;
   }
 
-  const cat = CATEGORIES.find(c => c.id === id);
   list.innerHTML = recipes.map((r, i) => `
     <div class="recipe-item">
-      <span class="recipe-item-icon">${cat.icon}</span>
+      <span class="recipe-item-icon" style="color:${cat.color}">${cat.icon}</span>
       <div class="recipe-item-info">
         <div class="recipe-item-name">${escapeHtml(r.name)}</div>
-        <div class="recipe-item-link"><a href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.url)}</a></div>
+        <div class="recipe-item-link">
+          <a href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.url)}</a>
+        </div>
       </div>
-      <button class="delete-btn" data-index="${i}">削除</button>
+      <button class="delete-btn" data-index="${i}" aria-label="削除">削除</button>
     </div>`).join('');
 
   list.querySelectorAll('.delete-btn').forEach(btn => {
@@ -95,24 +159,15 @@ function renderRecipes(id) {
 function addRecipe() {
   const nameInput = document.getElementById('recipeNameInput');
   const linkInput = document.getElementById('recipeLinkInput');
-  const errorEl = document.getElementById('formError');
+  const errorEl  = document.getElementById('formError');
   const name = nameInput.value.trim();
-  const url = linkInput.value.trim();
+  const url  = linkInput.value.trim();
 
-  if (!name) {
-    errorEl.textContent = 'レシピ名を入力してください';
-    nameInput.focus();
-    return;
-  }
-  if (!url) {
-    errorEl.textContent = 'URLを入力してください';
-    linkInput.focus();
-    return;
-  }
+  if (!name) { errorEl.textContent = 'レシピ名を入力してください'; nameInput.focus(); return; }
+  if (!url)  { errorEl.textContent = 'URLを入力してください'; linkInput.focus(); return; }
   if (!isValidUrl(url)) {
     errorEl.textContent = '正しいURL形式で入力してください（例：https://...）';
-    linkInput.focus();
-    return;
+    linkInput.focus(); return;
   }
 
   errorEl.textContent = '';
@@ -120,11 +175,9 @@ function addRecipe() {
   if (!data[currentCategoryId]) data[currentCategoryId] = [];
   data[currentCategoryId].push({ name, url });
   saveData(data);
-
   nameInput.value = '';
   linkInput.value = '';
   nameInput.focus();
-
   renderRecipes(currentCategoryId);
 }
 
@@ -146,27 +199,18 @@ function isValidUrl(str) {
   try {
     const u = new URL(str);
     return u.protocol === 'http:' || u.protocol === 'https:';
-  } catch {
-    return false;
-  }
+  } catch { return false; }
 }
 
 function escapeHtml(str) {
   return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 document.getElementById('backBtn').addEventListener('click', backToCategories);
 document.getElementById('addBtn').addEventListener('click', addRecipe);
-document.getElementById('recipeLinkInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') addRecipe();
-});
-document.getElementById('recipeNameInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') document.getElementById('recipeLinkInput').focus();
-});
+document.getElementById('recipeLinkInput').addEventListener('keydown', e => { if (e.key === 'Enter') addRecipe(); });
+document.getElementById('recipeNameInput').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('recipeLinkInput').focus(); });
 
 renderCategories();
