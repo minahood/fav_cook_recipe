@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お気に入りレシピ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>🍽️ お気に入りレシピ</h1>
+      <p class="subtitle">大切なレシピリンクを保存しよう</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="categories-section">
+      <h2 class="section-title">カテゴリ</h2>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="recipe-section" id="recipeSection" style="display:none;">
+      <div class="recipe-header">
+        <button class="back-btn" id="backBtn">← カテゴリに戻る</button>
+        <h2 class="recipe-title" id="recipeTitle"></h2>
+      </div>
+
+      <div class="add-form">
+        <h3>レシピを追加</h3>
+        <div class="form-row">
+          <input type="text" id="recipeNameInput" placeholder="レシピ名（例：肉じゃが）" />
+          <input type="url" id="recipeLinkInput" placeholder="URL（例：https://...）" />
+          <button class="add-btn" id="addBtn">追加</button>
+        </div>
+        <p class="form-error" id="formError"></p>
+      </div>
+
+      <div class="recipe-list" id="recipeList"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
