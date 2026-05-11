@@ -13,13 +13,12 @@ const CATEGORIES = [
   {
     id: 'meat', name: '肉', color: '#e87a5a', bg: '#fdf0ec',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <ellipse cx="14" cy="24" rx="5" ry="13"/>
-      <line x1="14" y1="11" x2="34" y2="11"/>
-      <line x1="14" y1="37" x2="34" y2="37"/>
-      <path d="M34 11Q40 17 40 24Q40 31 34 37"/>
-      <line x1="3" y1="24" x2="45" y2="24"/>
-      <circle cx="3" cy="24" r="3.5"/>
-      <circle cx="45" cy="24" r="3.5"/>
+      <path d="M10 14Q6 14 6 18L6 30Q6 34 10 34L38 34Q42 34 42 30L42 18Q42 14 38 14Z"/>
+      <circle cx="24" cy="24" r="3"/>
+      <line x1="3" y1="24" x2="11" y2="24"/>
+      <line x1="37" y1="24" x2="45" y2="24"/>
+      <circle cx="3" cy="24" r="2.5"/>
+      <circle cx="45" cy="24" r="2.5"/>
     </svg>`
   },
   {
@@ -64,13 +63,12 @@ const CATEGORIES = [
   {
     id: 'noodle', name: '麺', color: '#d4943a', bg: '#fdf4e4',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <ellipse cx="24" cy="16" rx="18" ry="5"/>
-      <path d="M6 16Q7 38 24 40Q41 38 42 16"/>
-      <path d="M17 40Q24 43 31 40"/>
-      <path d="M12 24Q16 22 20 24Q24 26 28 24Q32 22 36 24"/>
-      <path d="M13 31Q17 29 21 31Q25 33 29 31Q33 29 37 31"/>
-      <line x1="18" y1="37" x2="34" y2="9"/>
-      <line x1="23" y1="38" x2="39" y2="10"/>
+      <ellipse cx="24" cy="20" rx="16" ry="3.5"/>
+      <path d="M8 20Q9 36 24 38Q39 36 40 20"/>
+      <path d="M18 38Q24 40 30 38"/>
+      <path d="M12 26Q16 24 20 26Q24 28 28 26Q32 24 36 26"/>
+      <line x1="21" y1="16" x2="30" y2="6"/>
+      <line x1="25" y1="16" x2="34" y2="6"/>
     </svg>`
   },
   {
