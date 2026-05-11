@@ -13,9 +13,13 @@ const CATEGORIES = [
   {
     id: 'meat', name: '肉', color: '#e87a5a', bg: '#fdf0ec',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M8 19C8 11 13 5 21 5C29 5 34 11 34 19C34 27 29 33 21 33C13 33 8 27 8 19Z"/>
-      <line x1="28" y1="29" x2="38" y2="41"/>
-      <circle cx="39" cy="43" r="4"/>
+      <line x1="13" y1="18" x2="13" y2="36"/>
+      <line x1="35" y1="18" x2="35" y2="36"/>
+      <ellipse cx="24" cy="18" rx="11" ry="4"/>
+      <path d="M13 36Q24 41 35 36"/>
+      <line x1="24" y1="10" x2="24" y2="44"/>
+      <circle cx="24" cy="8" r="4"/>
+      <circle cx="24" cy="44" r="3.5"/>
     </svg>`
   },
   {
@@ -37,12 +41,14 @@ const CATEGORIES = [
   {
     id: 'soup', name: 'スープ', color: '#e07040', bg: '#fdf1ea',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M19 15C19 12 21 10 21 10C21 10 23 12 23 15"/>
-      <path d="M27 15C27 12 29 10 29 10C29 10 31 12 31 15"/>
-      <line x1="5" y1="25" x2="43" y2="25"/>
-      <path d="M8 25L11 41H37L40 25"/>
-      <path d="M5 25C5 25 7 21 8 25"/>
-      <path d="M43 25C43 25 41 21 40 25"/>
+      <circle cx="24" cy="8" r="2"/>
+      <path d="M12 13Q13 8 24 8Q35 8 36 13"/>
+      <line x1="10" y1="13" x2="38" y2="13"/>
+      <path d="M12 13L14 30H34L36 13"/>
+      <path d="M14 30Q14 33 24 33Q34 33 34 30"/>
+      <path d="M12 18Q8 18 8 22Q8 26 12 26"/>
+      <path d="M36 18Q40 18 40 22Q40 26 36 26"/>
+      <path d="M21 44C19 41 18 38 20 36C20 38 22 37 22 35C23 37 24 35 24 36C25 35 25 37 26 35C26 37 28 38 28 36C30 38 29 41 27 44C25 46 23 46 21 44Z"/>
     </svg>`
   },
   {
@@ -62,8 +68,8 @@ const CATEGORIES = [
       <path d="M9 25L13 42H35L39 25Z"/>
       <ellipse cx="24" cy="25" rx="15" ry="4"/>
       <path d="M15 32Q18 30 21 32Q24 34 27 32Q30 30 33 32"/>
-      <line x1="17" y1="10" x2="21" y2="25"/>
-      <line x1="29" y1="10" x2="27" y2="25"/>
+      <line x1="19" y1="10" x2="21" y2="25"/>
+      <line x1="27" y1="10" x2="29" y2="25"/>
     </svg>`
   },
   {
