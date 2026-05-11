@@ -13,9 +13,9 @@ const CATEGORIES = [
   {
     id: 'meat', name: '肉', color: '#e87a5a', bg: '#fdf0ec',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M11 29C9 21 14 12 23 12C27 12 30 10 33 12C40 15 41 23 39 31C37 37 30 41 22 39C15 37 12 34 11 29Z"/>
-      <line x1="31" y1="11" x2="38" y2="5"/>
-      <circle cx="39.5" cy="4" r="3.5"/>
+      <path d="M8 19C8 11 13 5 21 5C29 5 34 11 34 19C34 27 29 33 21 33C13 33 8 27 8 19Z"/>
+      <line x1="28" y1="29" x2="38" y2="41"/>
+      <circle cx="39" cy="43" r="4"/>
     </svg>`
   },
   {
@@ -59,21 +59,21 @@ const CATEGORIES = [
   {
     id: 'noodle', name: '麺', color: '#d4943a', bg: '#fdf4e4',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M9 31Q11 23 24 23Q37 23 39 31"/>
-      <path d="M9 31H39L36 43H12L9 31Z"/>
-      <path d="M15 27Q18 25 21 27Q24 29 27 27Q30 25 33 27"/>
-      <line x1="21" y1="13" x2="19" y2="27"/>
-      <line x1="27" y1="13" x2="29" y2="27"/>
+      <path d="M9 25L13 42H35L39 25Z"/>
+      <ellipse cx="24" cy="25" rx="15" ry="4"/>
+      <path d="M15 32Q18 30 21 32Q24 34 27 32Q30 30 33 32"/>
+      <line x1="17" y1="10" x2="21" y2="25"/>
+      <line x1="29" y1="10" x2="27" y2="25"/>
     </svg>`
   },
   {
     id: 'sweets', name: 'スイーツ', color: '#e078a8', bg: '#fdeef5',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 20C14 20 15 13 24 13C33 13 34 20 34 20"/>
-      <path d="M10 40L14 20H34L38 40H10Z"/>
-      <line x1="10" y1="30" x2="38" y2="30"/>
-      <path d="M19 13C21 9 27 9 29 13"/>
-      <path d="M22 9C22 7 26 7 26 9"/>
+      <rect x="8" y="24" width="32" height="17" rx="2"/>
+      <line x1="8" y1="32" x2="40" y2="32"/>
+      <path d="M8 24Q11 16 14 24Q17 16 20 24Q23 16 26 24Q29 16 32 24Q35 16 38 24Q40 16 40 24"/>
+      <path d="M21 16C21 13 24 11 24 11C24 11 27 13 27 16L24 20Z"/>
+      <line x1="24" y1="11" x2="24" y2="8"/>
     </svg>`
   },
 ];
