@@ -28,6 +28,16 @@ header h1 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  width: 34px;
+  height: 34px;
+  color: #e07040;
+  flex-shrink: 0;
 }
 
 .subtitle {
