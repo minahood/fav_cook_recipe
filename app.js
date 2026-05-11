@@ -13,12 +13,13 @@ const CATEGORIES = [
   {
     id: 'meat', name: '肉', color: '#e87a5a', bg: '#fdf0ec',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 14Q6 14 6 18L6 30Q6 34 10 34L38 34Q42 34 42 30L42 18Q42 14 38 14Z"/>
-      <circle cx="24" cy="24" r="3"/>
-      <line x1="3" y1="24" x2="11" y2="24"/>
-      <line x1="37" y1="24" x2="45" y2="24"/>
-      <circle cx="3" cy="24" r="2.5"/>
-      <circle cx="45" cy="24" r="2.5"/>
+      <ellipse cx="14" cy="24" rx="5" ry="11"/>
+      <path d="M14 13Q17 9 21 13Q25 17 29 13Q33 9 36 13"/>
+      <path d="M14 35Q17 39 21 35Q25 31 29 35Q33 39 36 35"/>
+      <path d="M36 13Q40 18 40 24Q40 30 36 35"/>
+      <line x1="3" y1="24" x2="45" y2="24"/>
+      <circle cx="3" cy="24" r="3"/>
+      <circle cx="45" cy="24" r="3"/>
     </svg>`
   },
   {
